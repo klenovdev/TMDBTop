@@ -127,7 +127,7 @@ extension NetworkService: NetworkServiceProtocol {
                  completionHandler: @escaping (Data?, URLResponse?, Error?) -> Void) -> URLSessionDataTask {
         
         return sendRequest(url,
-                           httpMethod: .POST,
+                           httpMethod: httpMethod,
                            httpHeaders: httpHeaders,
                            httpBody:httpBody,
                            completionHandler: completionHandler)
