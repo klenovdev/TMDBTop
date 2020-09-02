@@ -14,7 +14,7 @@ extension Data {
         
         if let json = try? JSONSerialization.jsonObject(with: self, options: []) {
             if let prettyPrintData = try? JSONSerialization.data(withJSONObject: json, options: .prettyPrinted) {
-                return String(bytes: prettyPrintData, encoding: String.Encoding.utf8)
+                return String(bytes: prettyPrintData, encoding: .utf8)
             }
         }
         
